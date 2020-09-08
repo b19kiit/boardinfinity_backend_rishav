@@ -82,8 +82,29 @@ class InputFilter{
     if(name.length != name_arr.length) throw Error("invalid input in name")
     return name_arr.join('')
   }
+  static ms_time(mss){
+    try {
+      const mil = ms(mss)
+      if(!mil) throw Error('')
+      return mil;
+    } catch (e) {
+      throw Error('Invalid input in duration')
+    }
+  }
 }
 
+app.use('/\*', function (req, res, next) {
+    res.header("Access-Control-Allow-Origin","*")
+    res.header("Access-Control-Allow-Headers","Content-Type")
+    res.header("Access-Control-Allow-Methods","GET, POST, PUT")
+    res.header("Access-Control-Allow-Credentials", "true")
+    next()
+})
+
+app.get('/', (req, res)=>{
+  res.write("<a href=\"https://github.com/b19kiit/boardinfinity_backend_rishav\">GitHub Repository</a><br>")
+  res.end("This is deployed on Tue Sep 08 2020 22:53:41 GMT+0530 (India Standard Time)")
+})
 //end points
 app.post('/add', jsonParser, async (req, res, next)=>{
   try {
@@ -92,13 +113,13 @@ app.post('/add', jsonParser, async (req, res, next)=>{
       "description": req.body.description || MANIFEST.APP_DEFAULTS.task_description,
       "creator": InputFilter.name(req.body.creator, MANIFEST.APP_DEFAULTS.task_creator),
       "createdAt": new Date(Date.now()),
-      "duration": req.body.duration || MANIFEST.APP_DEFAULTS.task_duration,
+      "duration": InputFilter.ms_time(req.body.duration || MANIFEST.APP_DEFAULTS.task_duration),
       "expiresAt":new Date(Date.now()+Number(ms(req.body.duration || MANIFEST.APP_DEFAULTS.task_duration)))
     }
     await TASKS_COLLECTION.insert(doc)
     res.json(doc)
   } catch (e) {
-    res.json( {"err":`${e}`} )
+    res.status(400).json( {"err":`${e}`} )
   }
 })
 
