@@ -128,7 +128,7 @@ app.get('/list', async (req, res, next)=>{
     const docs = await TASKS_COLLECTION.find()
     res.json(docs)
   } catch (e) {
-    res.end( {"err":e} )
+    res.status(400).json( {"err":e} )
   }
 })
 
