@@ -56,7 +56,7 @@ End point Links:
       - Scheduled to execute in interval of every one minute
       
       - Source code for the trigger function
-        ```
+        ```js script
         exports = async function() {
             const collection = context.services.get('Cluster0').db("tasks").collection("tasks");
             var result = await collection.deleteMany({"expiresAt":{"$lt":new Date()}});
