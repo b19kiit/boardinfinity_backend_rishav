@@ -130,3 +130,8 @@ Start the API Server `npm start`
   The trigger on MongoDB Cloud Atlas is fired in interval of every 1min, so in worst possible scenario The task should be removed after 1 min
   ```
 
+### Trace Error response on endpoints
+
+When ever a request with invalid parameters is sent to the API server, it will respond with 400 Bad Request and a body as JSON text of type `{err:"<Error Message>"}`
+
+**Note** The server may also respond similarly incase of error on database or some unknown error
