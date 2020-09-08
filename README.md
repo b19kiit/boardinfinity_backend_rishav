@@ -2,14 +2,13 @@
 Made By : Rishav Bhowmik | KIIT RollNO: 1706349
 
 ## Live Demo
-`https://boardinfinityhackrishav.herokuapp.com/` <-- Copy this
-[Link for Live Demo on Heroku, API Server](https://boardinfinityhackrishav.herokuapp.com/) <-hyperlinked
+[`https://boardinfinityhackrishav.herokuapp.com/`](https://boardinfinityhackrishav.herokuapp.com/) <-- Copy this
 
 End point Links:
 
-[Link for Live Demo on Heroku, for Backend path](https://boardinfinityhackrishav.herokuapp.com/)
+[Link for Live Demo on Heroku, for Backend path](https://boardinfinityhackrishav.herokuapp.com/) <-- Copy this
 
-[Link for Live Demo on Heroku, for Backend path](https://boardinfinityhackrishav.herokuapp.com/)
+[Link for Live Demo on Heroku, for Backend path](https://boardinfinityhackrishav.herokuapp.com/) <-- Copy this
 
 ### End points :
   - **`/add` - POST endpoint which adds the data**
@@ -107,7 +106,7 @@ Start the API Server `npm start`
      Or use URL [https://boardinfinityhackrishav.herokuapp.com/list](https://boardinfinityhackrishav.herokuapp.com/list) on your browser, Firfox Browser has an excellent UI to display JSON files
 
 
-  ### Lets Check if our trigger to delete expired tasks is working
+  ### Lets Check if our trigger can delete the expired tasks
    
    Adding a task with duration of 30 seconds
    
@@ -126,3 +125,4 @@ Start the API Server `npm start`
     ```
     The trigger on MongoDB Cloud Atlas is fired in interval of every 1min, so in worst possible scenario The task should be removed after 1 min
     ```
+
