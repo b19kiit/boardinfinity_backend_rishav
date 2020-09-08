@@ -110,19 +110,21 @@ Start the API Server `npm start`
    
    Adding a task with duration of 30 seconds
    
+   
    `curl -i -X POST -H "Content-Type: application/json" -d "{\"name\":\"Dinner\", \"description\":\"I will figure something out for the dinner\", \"creator\":\"Someone\", \"duration\":\"30s\"}" https://boardinfinityhackrishav.herokuapp.com/add`
     
-    Check the list before 30 seconds
+  Check the list before 30 seconds
     
-   `curl https://boardinfinityhackrishav.herokuapp.com/list` OR [Open in Browser](curl https://boardinfinityhackrishav.herokuapp.com/list)
+ `curl https://boardinfinityhackrishav.herokuapp.com/list` OR [Open in Browser](https://boardinfinityhackrishav.herokuapp.com/list)
+ 
    
-    Wait for 1 minute, And again check the list
-    
-    `curl https://boardinfinityhackrishav.herokuapp.com/list` OR [Open in Browser](curl https://boardinfinityhackrishav.herokuapp.com/list)
-    
-    
-    **Why have we waited for 1 min and not 30 s?**
-    ```
-    The trigger on MongoDB Cloud Atlas is fired in interval of every 1min, so in worst possible scenario The task should be removed after 1 min
-    ```
+  Wait for 1 minute, And again check the list
+
+  `curl https://boardinfinityhackrishav.herokuapp.com/list` OR [Open in Browser](https://boardinfinityhackrishav.herokuapp.com/list)
+
+
+  **Why have we waited for 1 min and not 30 s?**
+  ```
+  The trigger on MongoDB Cloud Atlas is fired in interval of every 1min, so in worst possible scenario The task should be removed after 1 min
+  ```
 
