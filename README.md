@@ -1,2 +1,2 @@
-# boardinfinity_backend_rishav
-Rishav Bhowmik solution for Backend Hackathon Problem for Board Infinity
+# Board Infinity Hackathlon solution
+Made By : Rishav Bhowmik | KIIT RollNO: 1706349
