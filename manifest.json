@@ -1,0 +1,16 @@
+{
+  "server":{"port":"< port number to listen to, if process.env.port is undefined >"},
+  "mongodb":{
+      "tasks":{
+        "uri":"< mongodb cluster URI >",
+        "db_name":"< database name >",
+        "collection_name":"< collection name >"
+      }
+  },
+  "APP_DEFAULTS":{
+    "task_name":"Un-named Task",
+    "task_description":"",
+    "task_creator":"",
+    "task_duration":"24h"
+  }
+}
