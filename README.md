@@ -1,7 +1,7 @@
 # Board Infinity Hackathlon solution
 Made By : Rishav Bhowmik | KIIT RollNO: 1706349
 
-[**Development Time Line**](https://github.com/b19kiit/boardinfinity_backend_rishav/blob/master/TIMELINE.md)
+[**Development Time Line (TIMELINE.md)**](https://github.com/b19kiit/boardinfinity_backend_rishav/blob/master/TIMELINE.md)
 
 ## Live Demo
 [`https://boardinfinityhackrishav.herokuapp.com/`](https://boardinfinityhackrishav.herokuapp.com/) <-- Copy this (This link just the root, it will not return anything, So check then end points)
