@@ -2,7 +2,7 @@
 Made By : Rishav Bhowmik | KIIT RollNO: 1706349
 
 ## Live Demo
-[`https://boardinfinityhackrishav.herokuapp.com/`](https://boardinfinityhackrishav.herokuapp.com/) <-- Copy this
+[`https://boardinfinityhackrishav.herokuapp.com/`](https://boardinfinityhackrishav.herokuapp.com/) <-- Copy this (This link just the root, it will not return anything, So check then end points)
 
 End point Links:
 
