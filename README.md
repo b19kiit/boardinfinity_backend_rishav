@@ -8,9 +8,9 @@ Made By : Rishav Bhowmik | KIIT RollNO: 1706349
 
 End point Links:
 
-[Link for Live Demo on Heroku, for Backend path](https://boardinfinityhackrishav.herokuapp.com/) <-- Copy this
+[Link for Live Demo on Heroku, path = '/add' to add new 'task'](https://boardinfinityhackrishav.herokuapp.com/) <-- Copy this
 
-[Link for Live Demo on Heroku, for Backend path](https://boardinfinityhackrishav.herokuapp.com/) <-- Copy this
+[Link for Live Demo on Heroku, path = '/list' to return all 'tasks' on database](https://boardinfinityhackrishav.herokuapp.com/) <-- Copy this
 
 ### End points :
   - **`/add` - POST endpoint which adds the data**
