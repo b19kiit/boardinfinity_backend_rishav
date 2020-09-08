@@ -72,7 +72,57 @@ End point Links:
     - `server.js` : This is the main JavaScript file for the API server
 
     - `node_modules` :  This folder contail all the npm packges required in this project
+    
+    
   
-## To start the API server
+## To start the API server locally
 This project is developed on NodeJS version `12.18.3'
 
+Clone this project from `https://github.com/b19kiit/boardinfinity_backend_rishav.git`
+
+Install npm packages `npm install`
+
+Prepare `manifest.json` file as per the configuration of your system and URI for connecting to mongodb database
+
+Start the API Server `npm start`
+
+
+## Testing the End Points
+  
+  - **Endpoint `/add`** :
+  
+    **USING curl**
+  
+    `curl -i -X POST -H "Content-Type: application/json" -d "{\"name\":\"Breakfast\", \"description\":\"I will have Aloo ka Paratha in Morning\", \"creator\":\"Someone\", \"duration\":\"10h\"}" https://boardinfinityhackrishav.herokuapp.com/add`
+    
+    `curl -i -X POST -H "Content-Type: application/json" -d "{\"name\":\"Lunch\", \"description\":\"I will have Rajma Chawal in Noon\", \"creator\":\"Someone\", \"duration\":\"16h\"}" https://boardinfinityhackrishav.herokuapp.com/add`
+    
+    `curl -i -X POST -H "Content-Type: application/json" -d "{\"name\":\"Dinner\", \"description\":\"I will figure something out for the dinner\", \"creator\":\"Someone\", \"duration\":\"1day\"}" https://boardinfinityhackrishav.herokuapp.com/add`
+
+
+  - **Endpoint `/list`**
+  
+     `curl https://boardinfinityhackrishav.herokuapp.com/list`
+     
+     Or use URL [https://boardinfinityhackrishav.herokuapp.com/list](https://boardinfinityhackrishav.herokuapp.com/list) on your browser, Firfox Browser has an excellent UI to display JSON files
+
+
+  ### Lets Check if our trigger to delete expired tasks is working
+   
+   Adding a task with duration of 30 seconds
+   
+   `curl -i -X POST -H "Content-Type: application/json" -d "{\"name\":\"Dinner\", \"description\":\"I will figure something out for the dinner\", \"creator\":\"Someone\", \"duration\":\"30s\"}" https://boardinfinityhackrishav.herokuapp.com/add`
+    
+    Check the list before 30 seconds
+    
+   `curl https://boardinfinityhackrishav.herokuapp.com/list` OR [Open in Browser](curl https://boardinfinityhackrishav.herokuapp.com/list)
+   
+    Wait for 1 minute, And again check the list
+    
+    `curl https://boardinfinityhackrishav.herokuapp.com/list` OR [Open in Browser](curl https://boardinfinityhackrishav.herokuapp.com/list)
+    
+    
+    **Why have we waited for 1 min and not 30 s?**
+    ```
+    The trigger on MongoDB Cloud Atlas is fired in interval of every 1min, so in worst possible scenario The task should be removed after 1 min
+    ```
