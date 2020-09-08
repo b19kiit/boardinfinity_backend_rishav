@@ -43,7 +43,7 @@ End point Links:
     
   
 
-## Componets of this project
+## Components of this project
 
   - **MongoDB DataBase (with Scheduled Trigger)**
   
