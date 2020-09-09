@@ -8,7 +8,7 @@ Made By : Rishav Bhowmik | KIIT RollNO: 1706349
 
 End point Links:
 
-[Link, path = '/add' to add new 'task'](https://boardinfinityhackrishav.herokuapp.com/add) <-- Copy this
+[Link, path = '/add' to add new 'task'](https://boardinfinityhackrishav.herokuapp.com/add) <-- Copy this  (! This link will only respond to POST request )
 
 [Link, path = '/list' to return all 'tasks' on database](https://boardinfinityhackrishav.herokuapp.com/list) <-- Copy this
 
