@@ -12,9 +12,9 @@ By Rishav Bhowmik
 
 - Prepared Prototype of `server.js` and `manifest.json`
 
-- intialised the project with npm, installed the required npm Packages to the Project Directory
+- Initialized the project with npm, installed the required npm Packages to the Project Directory
 
-- tested API server's end points on my local computer
+- Tested API server's end points on my local computer
 
 ### After Noon
 
@@ -22,7 +22,7 @@ By Rishav Bhowmik
 
 - Tested `mongodb` package on node js server to integrate mongodb deployed on Cloud Atlas
 
-- Integrated Mongodb driver on API server's program ('server.js'), develped MongoCollection class to perform operation on database's collections (in this case just the collection `tasks`)
+- Integrated Mongodb driver on API server's program ('server.js'), developed MongoCollection class to perform operation on database's collections (in this case just the collection `tasks`)
 
 - Further developed `server.js` to insert task to the data base and retrive the tasks form the data base
 
@@ -67,9 +67,9 @@ By Rishav Bhowmik
 
 - Futher Programmed `server.js` with imporved error handeling in Endpoints & InputFilter class
 
-- added more functionality to InputFilter class (to validate the time formats)
+- Added more functionality to InputFilter class (to validate the time formats)
 
-- tested the API server locally
+- Aested the API server locally
 
 - Re-Deployed the project on heroku cloud
 
